@@ -1,0 +1,141 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.menu {
+  width: 100%;
+  font-size: 35px;
+  text-align: center; }
+  .menu ul li {
+    border: solid 3px #2b2229;
+    border-radius: 6px;
+    width: 200px;
+    margin: 5px;
+  font-weight: bold;}
+    
+    .menu ul li:hover {
+      border: dotted;
+      color: black; }
+
+/*Clase para formato de video y párrafo de las secciones Intro e Ideas*/
+.intro p {
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 20px; }
+
+.intro iframe {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  margin-bottom: 30px; }
+
+/*---PARA SECCIÓN INTRO---*/
+.imgDeIntro {
+  display: flex;
+  justify-content: space-around; }
+
+/*Para el efecto del texto sobre la imagen*/
+.contieneImgE {
+  height: 400px;
+  width: 400px;
+  object-fit: fill;
+  background-image: url("./Fondos/exterior4.JPG"); }
+  .contieneImgE:hover div.efectoTxt {
+    opacity: 0.9; }
+  .contieneImgE:hover p.aparece {
+    margin-left: 70px;
+    transition: margin 0.7s; }
+
+.contieneImgI {
+  height: 400px;
+  width: 400px;
+  object-fit: fill;
+  background-image: url("./Fondos/interior1.JPG"); }
+  .contieneImgI:hover div.efectoTxt {
+    opacity: 0.9; }
+  .contieneImgI:hover p.aparece {
+    margin-left: 70px;
+    transition: margin 0.7s; }
+
+.efectoTxt {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  object-fit: fill;
+  background-color: rgba(241, 201, 201, 0.836);
+  opacity: 0;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer; }
+
+.aparece {
+  position: absolute;
+  color: #643737;
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;
+  margin-top: 50px; }
+
+/*---PARA SECCIONES EXTERIOR/INTERIOR---*/
+.imgExtInt, .imgExtInt div {
+  display: flex;
+  justify-content: center; }
+  .imgExtInt div {
+    margin-bottom: 10px;
+    max-width: fit-content;
+    max-height: fit-content; }
+    .imgExtInt div img {
+      /*cursor: pointer;  */
+      height: 300px;
+      width: 300px;
+      object-fit: fill; }
+      .imgExtInt div img:hover {
+        border: solid 2px;
+        opacity: 0.9; }
+
+header {
+  background-image: url("../css/Fondos/background-colorido.png");
+  /* background-color: gray; */
+  font-size: 15px;
+  text-align: center;
+  padding: 15px;
+  /* opacity: 0.8; */
+  font-family: 'Indie Flower', cursive; }
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 23px;
+  background-color: beige;}
+
+footer {
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 20px;
+  line-height: 1.4;
+  padding-top: 10px;
+  background-color: rgb(248, 248, 241); }
+  footer div {
+    padding-bottom: 5px; }
+
+h1 {
+  font-size: 60px; }
+
+h2, h3 {
+  margin: 20px;
+  margin-top: 30px;
+  font-weight: bold; }
+
+a {
+  text-decoration: none; }
+
+p {
+  text-align: justify; }
+
+.listaIdeas li {
+  margin-left: 20px;
+  padding: 5px; }
+
+.espacio{
+  line-height:40px;
+}

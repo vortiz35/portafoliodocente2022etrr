@@ -1,0 +1,93 @@
+@mixin formato($alto,$ancho){
+    height: $alto;
+    width: $ancho;
+    object-fit: fill;
+}
+
+/*Clase para formato de video y párrafo de las secciones Intro e Ideas*/
+.intro{
+    p{
+        text-align: justify;
+        line-height: 1.5;
+        margin-left: 20px;
+    }
+    iframe{
+        @include formato(100%,100%);
+        margin-bottom: 30px;
+    }  
+}
+
+/*---PARA SECCIÓN INTRO---*/
+.imgDeIntro{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Para el efecto del texto sobre la imagen*/
+.contieneImgE{
+    @include formato(400px,400px);
+
+    background-image: url("./Fondos/exterior4.JPG");
+
+    &:hover div.efectoTxt{
+        opacity: 0.9;
+    }
+    &:hover p.aparece{
+        margin-left: 70px;
+        transition: margin 0.7s;
+    }
+}
+
+.contieneImgI{
+    @include formato(400px,400px);
+
+    background-image: url("./Fondos/interior1.JPG");
+
+    &:hover div.efectoTxt{
+        opacity: 0.9;
+    }
+    &:hover p.aparece{
+        margin-left: 70px;
+        transition: margin 0.7s;
+    }
+}
+
+.efectoTxt{
+    position: absolute;
+    @include formato(400px,400px);
+    background-color: rgba(241, 201, 201, 0.836);
+    opacity: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.aparece{
+    position: absolute;
+    color: rgb(100, 55, 55);
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+/*---PARA SECCIONES EXTERIOR/INTERIOR---*/
+.imgExtInt{
+    display: flex;
+    justify-content: center;
+    
+    //overflow: hidden;
+    div{
+        @extend .imgExtInt;
+        margin-bottom: 10px;
+        max-width: fit-content;
+        max-height: fit-content;
+        img{
+            /*cursor: pointer;  */          
+            @include formato(300px,300px);            
+            &:hover{
+                border: solid 2px;
+                opacity: 0.9; 
+            }
+        }
+    }
+}
